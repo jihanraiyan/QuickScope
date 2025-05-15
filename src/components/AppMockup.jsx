@@ -228,10 +228,10 @@ export default function AppMockup() {
                         <input 
                           type="text" 
                           placeholder="Ask a question..."
-                          className="w-full p-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                          className="w-full p-2.5 pr-12 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                         />
-                        <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </button>
@@ -243,23 +243,23 @@ export default function AppMockup() {
             </div>
             
             {/* Feature Label Annotations - Desktop */}
-            <div className="absolute -right-4 top-1/4 transform translate-x-full">
-              <div className="bg-primary text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
-                <div className="absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2 border-t-2 border-primary w-6"></div>
+            <div className="absolute -right-3 top-1/4 transform translate-x-full">
+              <div className="bg-primary text-white px-2 py-1 rounded-md shadow-md relative text-xs">
+                <div className="absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2 border-t border-primary w-4"></div>
                 <p className="font-medium">Ask what it means for you</p>
               </div>
             </div>
             
-            <div className="absolute -left-4 top-1/3 transform -translate-x-full">
-              <div className="bg-secondary text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
-                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-secondary w-6"></div>
+            <div className="absolute -left-3 top-1/3 transform -translate-x-full">
+              <div className="bg-secondary text-white px-2 py-1 rounded-md shadow-md relative text-xs">
+                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t border-secondary w-4"></div>
                 <p className="font-medium">Swipe through news like flashcards</p>
               </div>
             </div>
             
-            <div className="absolute -left-4 top-2/4 transform -translate-x-full">
-              <div className="bg-indigo-700 text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
-                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-indigo-700 w-6"></div>
+            <div className="absolute -left-3 top-2/4 transform -translate-x-full">
+              <div className="bg-indigo-700 text-white px-2 py-1 rounded-md shadow-md relative text-xs">
+                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t border-indigo-700 w-4"></div>
                 <p className="font-medium">Personal relevance explained</p>
               </div>
             </div>
