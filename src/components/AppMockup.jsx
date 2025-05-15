@@ -55,7 +55,7 @@ export default function AppMockup() {
         {/* Desktop version - hidden on mobile */}
         <div className="relative hidden md:flex justify-center">
           {/* Desktop Mockup */}
-          <div className="relative w-full max-w-5xl">
+          <div className="relative w-full max-w-4xl mx-auto">
             {/* Desktop Frame */}
             <div className="bg-gray-800 rounded-lg shadow-2xl p-3 overflow-hidden">
               {/* Browser Top Bar */}
@@ -74,8 +74,8 @@ export default function AppMockup() {
               <div className="bg-gray-100 rounded-b-lg overflow-hidden">
                 {/* App Header */}
                 <div className="bg-primary text-white p-4 flex items-center justify-between">
-                  <div className="text-2xl font-bold">QuickScope</div>
-                  <div className="flex items-center space-x-4">
+                  <div className="text-xl font-bold">QuickScope</div>
+                  <div className="flex items-center space-x-3">
                     <span className="text-sm">Today's Top Stories</span>
                     <span className="text-sm">My Feed</span>
                     <span className="text-sm bg-white text-primary px-3 py-1 rounded-full">Account</span>
@@ -83,38 +83,38 @@ export default function AppMockup() {
                 </div>
                 
                 {/* App Content - Two Column Layout */}
-                <div className="flex h-[500px]">
+                <div className="flex h-[450px]">
                   {/* News Cards Column */}
-                  <div className="w-2/3 p-6 relative overflow-hidden">
+                  <div className="w-2/3 p-5 relative overflow-hidden">
                     <h3 className="text-lg font-semibold mb-4 text-gray-700">Today's Headlines</h3>
                     
                     {/* News Card 1 */}
                     <div
-                      className="bg-white rounded-xl shadow-lg p-6 mb-4 transition-all duration-300 transform"
+                      className="bg-white rounded-xl shadow-lg p-5 mb-4 transition-all duration-300 transform"
                       style={{
                         transform: `translateX(${(activeCard - 0) * 100}%)`,
                         opacity: activeCard === 0 ? 1 : 0,
                         position: activeCard === 0 ? 'relative' : 'absolute',
-                        width: 'calc(100% - 3rem)',
+                        width: 'calc(100% - 2.5rem)',
                       }}
                     >
-                      <h3 className="text-xl font-bold mb-3">{mockContent[0].title}</h3>
-                      <p className="text-gray-600 mb-4 text-lg">{mockContent[0].summary}</p>
-                      <div className="bg-indigo-50 p-4 rounded-lg">
+                      <h3 className="text-lg font-bold mb-3">{mockContent[0].title}</h3>
+                      <p className="text-gray-600 mb-3 text-base">{mockContent[0].summary}</p>
+                      <div className="bg-indigo-50 p-3 rounded-lg">
                         <p className="text-sm text-primary font-medium mb-1">Why it matters to you:</p>
-                        <p className="text-gray-700">{mockContent[0].whyItMatters}</p>
+                        <p className="text-gray-700 text-sm">{mockContent[0].whyItMatters}</p>
                       </div>
                       
-                      <div className="flex justify-between mt-6">
-                        <button className="px-4 py-2 bg-gray-200 rounded-lg text-gray-700">Details</button>
+                      <div className="flex justify-between mt-4">
+                        <button className="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 text-sm">Details</button>
                         <div className="flex space-x-2">
-                          <button className="p-2 rounded-full bg-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                           </button>
-                          <button className="p-2 rounded-full bg-green-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </button>
@@ -124,31 +124,31 @@ export default function AppMockup() {
                     
                     {/* News Card 2 */}
                     <div
-                      className="bg-white rounded-xl shadow-lg p-6 mb-4 transition-all duration-300 transform"
+                      className="bg-white rounded-xl shadow-lg p-5 mb-4 transition-all duration-300 transform"
                       style={{
                         transform: `translateX(${(activeCard - 1) * 100}%)`,
                         opacity: activeCard === 1 ? 1 : 0,
                         position: activeCard === 1 ? 'relative' : 'absolute',
-                        width: 'calc(100% - 3rem)',
+                        width: 'calc(100% - 2.5rem)',
                       }}
                     >
-                      <h3 className="text-xl font-bold mb-3">{mockContent[1].title}</h3>
-                      <p className="text-gray-600 mb-4 text-lg">{mockContent[1].summary}</p>
-                      <div className="bg-indigo-50 p-4 rounded-lg">
+                      <h3 className="text-lg font-bold mb-3">{mockContent[1].title}</h3>
+                      <p className="text-gray-600 mb-3 text-base">{mockContent[1].summary}</p>
+                      <div className="bg-indigo-50 p-3 rounded-lg">
                         <p className="text-sm text-primary font-medium mb-1">Why it matters to you:</p>
-                        <p className="text-gray-700">{mockContent[1].whyItMatters}</p>
+                        <p className="text-gray-700 text-sm">{mockContent[1].whyItMatters}</p>
                       </div>
                       
-                      <div className="flex justify-between mt-6">
-                        <button className="px-4 py-2 bg-gray-200 rounded-lg text-gray-700">Details</button>
+                      <div className="flex justify-between mt-4">
+                        <button className="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 text-sm">Details</button>
                         <div className="flex space-x-2">
-                          <button className="p-2 rounded-full bg-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                           </button>
-                          <button className="p-2 rounded-full bg-green-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </button>
@@ -158,31 +158,31 @@ export default function AppMockup() {
                     
                     {/* News Card 3 */}
                     <div
-                      className="bg-white rounded-xl shadow-lg p-6 mb-4 transition-all duration-300 transform"
+                      className="bg-white rounded-xl shadow-lg p-5 mb-4 transition-all duration-300 transform"
                       style={{
                         transform: `translateX(${(activeCard - 2) * 100}%)`,
                         opacity: activeCard === 2 ? 1 : 0,
                         position: activeCard === 2 ? 'relative' : 'absolute',
-                        width: 'calc(100% - 3rem)',
+                        width: 'calc(100% - 2.5rem)',
                       }}
                     >
-                      <h3 className="text-xl font-bold mb-3">{mockContent[2].title}</h3>
-                      <p className="text-gray-600 mb-4 text-lg">{mockContent[2].summary}</p>
-                      <div className="bg-indigo-50 p-4 rounded-lg">
+                      <h3 className="text-lg font-bold mb-3">{mockContent[2].title}</h3>
+                      <p className="text-gray-600 mb-3 text-base">{mockContent[2].summary}</p>
+                      <div className="bg-indigo-50 p-3 rounded-lg">
                         <p className="text-sm text-primary font-medium mb-1">Why it matters to you:</p>
-                        <p className="text-gray-700">{mockContent[2].whyItMatters}</p>
+                        <p className="text-gray-700 text-sm">{mockContent[2].whyItMatters}</p>
                       </div>
                       
-                      <div className="flex justify-between mt-6">
-                        <button className="px-4 py-2 bg-gray-200 rounded-lg text-gray-700">Details</button>
+                      <div className="flex justify-between mt-4">
+                        <button className="px-3 py-1 bg-gray-200 rounded-lg text-gray-700 text-sm">Details</button>
                         <div className="flex space-x-2">
-                          <button className="p-2 rounded-full bg-gray-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                           </button>
-                          <button className="p-2 rounded-full bg-green-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <button className="p-1 rounded-full bg-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </button>
@@ -196,7 +196,7 @@ export default function AppMockup() {
                         <div 
                           key={index} 
                           className={`h-2 rounded-full transition-all duration-300 ${
-                            activeCard === index ? 'w-10 bg-primary' : 'w-2 bg-gray-300'
+                            activeCard === index ? 'w-8 bg-primary' : 'w-2 bg-gray-300'
                           }`}
                         ></div>
                       ))}
@@ -204,34 +204,34 @@ export default function AppMockup() {
                   </div>
                   
                   {/* AI Question Panel */}
-                  <div className="w-1/3 bg-gray-50 p-6 border-l border-gray-200">
-                    <h3 className="text-lg font-semibold mb-4 text-gray-700">Ask AI</h3>
+                  <div className="w-1/3 bg-gray-50 p-4 border-l border-gray-200">
+                    <h3 className="text-base font-semibold mb-3 text-gray-700">Ask AI</h3>
                     
-                    <div className="bg-white rounded-xl shadow-md p-4 mb-4">
-                      <div className="flex items-start mb-3">
-                        <div className="bg-indigo-100 rounded-full p-2 mr-3 flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                    <div className="bg-white rounded-xl shadow-md p-3 mb-3">
+                      <div className="flex items-start mb-2">
+                        <div className="bg-indigo-100 rounded-full p-1.5 mr-2 flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                           </svg>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-700">{mockContent[activeCard].question}</p>
+                          <p className="font-medium text-gray-700 text-sm">{mockContent[activeCard].question}</p>
                         </div>
                       </div>
-                      <div className="pl-10 border-l-2 border-indigo-200 ml-4">
-                        <p className="text-gray-600">{mockContent[activeCard].answer}</p>
+                      <div className="pl-8 border-l-2 border-indigo-200 ml-3">
+                        <p className="text-gray-600 text-xs">{mockContent[activeCard].answer}</p>
                       </div>
                     </div>
                     
-                    <div className="mt-4">
+                    <div className="mt-3">
                       <div className="relative">
                         <input 
                           type="text" 
                           placeholder="Ask a question..."
-                          className="w-full p-3 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                          className="w-full p-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                         />
                         <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </button>
@@ -244,22 +244,22 @@ export default function AppMockup() {
             
             {/* Feature Label Annotations - Desktop */}
             <div className="absolute -right-4 top-1/4 transform translate-x-full">
-              <div className="bg-primary text-white px-4 py-2 rounded-lg shadow-lg relative">
-                <div className="absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2 border-t-2 border-primary w-8"></div>
+              <div className="bg-primary text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
+                <div className="absolute left-0 top-1/2 transform -translate-x-full -translate-y-1/2 border-t-2 border-primary w-6"></div>
                 <p className="font-medium">Ask what it means for you</p>
               </div>
             </div>
             
             <div className="absolute -left-4 top-1/3 transform -translate-x-full">
-              <div className="bg-secondary text-white px-4 py-2 rounded-lg shadow-lg relative">
-                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-secondary w-8"></div>
+              <div className="bg-secondary text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
+                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-secondary w-6"></div>
                 <p className="font-medium">Swipe through news like flashcards</p>
               </div>
             </div>
             
             <div className="absolute -left-4 top-2/4 transform -translate-x-full">
-              <div className="bg-indigo-700 text-white px-4 py-2 rounded-lg shadow-lg relative">
-                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-indigo-700 w-8"></div>
+              <div className="bg-indigo-700 text-white px-3 py-1.5 rounded-lg shadow-lg relative text-sm">
+                <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 border-t-2 border-indigo-700 w-6"></div>
                 <p className="font-medium">Personal relevance explained</p>
               </div>
             </div>
